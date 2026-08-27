@@ -155,7 +155,7 @@ export default function AFLPlayerCard({
                 />
               ) : (
                 <div className="w-20 h-20 rounded-full bg-gray-300 border-4 border-white shadow-lg flex items-center justify-center">
-                  <span className="text-2xl font-bold text-gray-600">
+                  <span className="text-2xl font-bold text-gray-600 dark:text-gray-400">
                     {player.name
                       .split(" ")
                       .map((n) => n[0])
@@ -171,7 +171,7 @@ export default function AFLPlayerCard({
                 <h3 className="font-bold text-lg leading-tight">
                   {player.name}
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   {player.age}y • {player.height} • {player.weight}
                 </p>
               </div>
@@ -182,25 +182,25 @@ export default function AFLPlayerCard({
                   <div className="text-lg font-bold text-blue-600">
                     {player.stats.goals}
                   </div>
-                  <div className="text-xs text-gray-600">Goals</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Goals</div>
                 </div>
                 <div className="bg-green-50 rounded-lg p-2">
                   <div className="text-lg font-bold text-green-600">
                     {player.stats.disposals}
                   </div>
-                  <div className="text-xs text-gray-600">Disposals</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Disposals</div>
                 </div>
                 <div className="bg-purple-50 rounded-lg p-2">
                   <div className="text-lg font-bold text-purple-600">
                     {player.stats.efficiency}%
                   </div>
-                  <div className="text-xs text-gray-600">Efficiency</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Efficiency</div>
                 </div>
               </div>
 
               {/* Form indicator */}
               <div className="flex items-center justify-center gap-2">
-                <span className="text-xs text-gray-600">Form:</span>
+                <span className="text-xs text-gray-600 dark:text-gray-400">Form:</span>
                 {formTrend ? (
                   <TrendingUp className="w-4 h-4 text-green-500" />
                 ) : (
@@ -224,43 +224,43 @@ export default function AFLPlayerCard({
               {/* Header */}
               <div className="text-center mb-4">
                 <h3 className="font-bold text-lg">{player.name}</h3>
-                <p className="text-sm text-gray-600">Performance Metrics</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Performance Metrics</p>
               </div>
 
               {/* Performance Stats */}
               <div className="flex-1 space-y-3 overflow-y-auto">
                 {/* Core Stats */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-sm text-gray-700">
+                  <h4 className="font-medium text-sm text-gray-700 dark:text-gray-300">
                     Core Stats
                   </h4>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="bg-gray-50 p-2 rounded">
                       <div className="font-semibold">{player.stats.kicks}</div>
-                      <div className="text-gray-600">Kicks</div>
+                      <div className="text-gray-600 dark:text-gray-400">Kicks</div>
                     </div>
                     <div className="bg-gray-50 p-2 rounded">
                       <div className="font-semibold">
                         {player.stats.handballs}
                       </div>
-                      <div className="text-gray-600">Handballs</div>
+                      <div className="text-gray-600 dark:text-gray-400">Handballs</div>
                     </div>
                     <div className="bg-gray-50 p-2 rounded">
                       <div className="font-semibold">{player.stats.marks}</div>
-                      <div className="text-gray-600">Marks</div>
+                      <div className="text-gray-600 dark:text-gray-400">Marks</div>
                     </div>
                     <div className="bg-gray-50 p-2 rounded">
                       <div className="font-semibold">
                         {player.stats.tackles}
                       </div>
-                      <div className="text-gray-600">Tackles</div>
+                      <div className="text-gray-600 dark:text-gray-400">Tackles</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Efficiency Meters */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-sm text-gray-700">
+                  <h4 className="font-medium text-sm text-gray-700 dark:text-gray-300">
                     Efficiency
                   </h4>
                   <div className="space-y-1.5">
@@ -289,7 +289,7 @@ export default function AFLPlayerCard({
 
                 {/* Movement Stats */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-sm text-gray-700">
+                  <h4 className="font-medium text-sm text-gray-700 dark:text-gray-300">
                     Movement
                   </h4>
                   <div className="grid grid-cols-2 gap-2 text-xs">
@@ -297,20 +297,20 @@ export default function AFLPlayerCard({
                       <div className="font-semibold">
                         {player.stats.avgSpeed}
                       </div>
-                      <div className="text-gray-600">Avg Speed</div>
+                      <div className="text-gray-600 dark:text-gray-400">Avg Speed</div>
                     </div>
                     <div className="bg-red-50 p-2 rounded">
                       <div className="font-semibold">
                         {player.stats.maxSpeed}
                       </div>
-                      <div className="text-gray-600">Max Speed</div>
+                      <div className="text-gray-600 dark:text-gray-400">Max Speed</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Recent Form */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-sm text-gray-700">
+                  <h4 className="font-medium text-sm text-gray-700 dark:text-gray-300">
                     Recent Form
                   </h4>
                   <div className="grid grid-cols-3 gap-1">
@@ -335,7 +335,7 @@ export default function AFLPlayerCard({
 
               {/* Click hint */}
               <div className="text-center mt-2">
-                <p className="text-xs text-gray-500">Click to flip back</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Click to flip back</p>
               </div>
             </div>
           </CardContent>

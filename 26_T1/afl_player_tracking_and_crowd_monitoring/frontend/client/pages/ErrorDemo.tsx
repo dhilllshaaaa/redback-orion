@@ -106,7 +106,7 @@ export default function ErrorDemo() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 pb-16 lg:pb-0">
@@ -117,7 +117,7 @@ export default function ErrorDemo() {
               <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                 Error Demo Page
               </h1>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
                 Test different error states and fallback pages
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function ErrorDemo() {
                   <span className="text-center">
                     Network Error
                     <br />
-                    <small className="text-gray-500">Connection issues</small>
+                    <small className="text-gray-500 dark:text-gray-400">Connection issues</small>
                   </span>
                 </Button>
 
@@ -164,7 +164,7 @@ export default function ErrorDemo() {
                   <span className="text-center">
                     Server Error
                     <br />
-                    <small className="text-gray-500">500 Internal Error</small>
+                    <small className="text-gray-500 dark:text-gray-400">500 Internal Error</small>
                   </span>
                 </Button>
 
@@ -177,7 +177,7 @@ export default function ErrorDemo() {
                   <span className="text-center">
                     Unauthorized
                     <br />
-                    <small className="text-gray-500">401 Access Denied</small>
+                    <small className="text-gray-500 dark:text-gray-400">401 Access Denied</small>
                   </span>
                 </Button>
 
@@ -190,7 +190,7 @@ export default function ErrorDemo() {
                   <span className="text-center">
                     Forbidden
                     <br />
-                    <small className="text-gray-500">403 Forbidden</small>
+                    <small className="text-gray-500 dark:text-gray-400">403 Forbidden</small>
                   </span>
                 </Button>
 
@@ -203,7 +203,7 @@ export default function ErrorDemo() {
                   <span className="text-center">
                     General Error
                     <br />
-                    <small className="text-gray-500">Generic error page</small>
+                    <small className="text-gray-500 dark:text-gray-400">Generic error page</small>
                   </span>
                 </Button>
 
@@ -216,7 +216,7 @@ export default function ErrorDemo() {
                   <span className="text-center">
                     JavaScript Error
                     <br />
-                    <small className="text-gray-500">
+                    <small className="text-gray-500 dark:text-gray-400">
                       Triggers ErrorBoundary
                     </small>
                   </span>

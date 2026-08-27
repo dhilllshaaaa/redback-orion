@@ -1584,7 +1584,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 pb-16 lg:pb-0">
@@ -1599,7 +1599,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                     AFL Analytics
                   </h1>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
                     Real-time match insights & player analytics
                   </p>
                 </div>
@@ -1613,11 +1613,15 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                   {isLive ? "LIVE" : "OFFLINE"}
                 </Badge>
                 {userEmail && (
-                  <span className="text-sm text-gray-600 hidden sm:block">
+                  <span className="text-sm text-gray-600 dark:text-gray-400 hidden sm:block">
                     Welcome, {userEmail}
                   </span>
                 )}
-                <Button variant="outline" size="sm">
+               <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => navigate("/settings")}
+                >
                   <Settings className="w-4 h-4 mr-2" />
                   Settings
                 </Button>
@@ -1718,7 +1722,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                         onClick={() => setSelectedPlayer(player)}
                       >
                         <div className="font-medium">{player.name}</div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           {player.team} ��� {player.position}
                         </div>
                         <div className="text-xs text-green-600 mt-1">
@@ -1746,31 +1750,31 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                         <div className="text-2xl font-bold text-blue-600">
                           {selectedPlayer.kicks}
                         </div>
-                        <div className="text-sm text-gray-600">Kicks</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Kicks</div>
                       </div>
                       <div className="text-center p-4 bg-green-50 rounded-lg">
                         <div className="text-2xl font-bold text-green-600">
                           {selectedPlayer.handballs}
                         </div>
-                        <div className="text-sm text-gray-600">Handballs</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Handballs</div>
                       </div>
                       <div className="text-center p-4 bg-purple-50 rounded-lg">
                         <div className="text-2xl font-bold text-purple-600">
                           {selectedPlayer.marks}
                         </div>
-                        <div className="text-sm text-gray-600">Marks</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Marks</div>
                       </div>
                       <div className="text-center p-4 bg-orange-50 rounded-lg">
                         <div className="text-2xl font-bold text-orange-600">
                           {selectedPlayer.tackles}
                         </div>
-                        <div className="text-sm text-gray-600">Tackles</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Tackles</div>
                       </div>
                       <div className="text-center p-4 bg-red-50 rounded-lg">
                         <div className="text-2xl font-bold text-red-600">
                           {selectedPlayer.goals}
                         </div>
-                        <div className="text-sm text-gray-600">Goals</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Goals</div>
                       </div>
                       <div
                         className="text-center p-4 bg-yellow-50 rounded-lg cursor-pointer relative group"
@@ -1779,7 +1783,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                         <div className="text-2xl font-bold text-yellow-600">
                           {selectedPlayer.efficiency}%
                         </div>
-                        <div className="text-sm text-gray-600">Efficiency</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Efficiency</div>
                         <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block z-10 w-48 bg-gray-800 text-white text-xs rounded-lg p-3 shadow-lg">
                           <div className="font-bold mb-1">
                             {selectedPlayer.efficiency >= 90 ? "🏆 Excellent" :
@@ -1874,7 +1878,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                                   }
                                   className="h-2"
                                 />
-                                <div className="text-xs text-gray-600 mt-1">
+                                <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                                   {selectedPlayer.name}
                                 </div>
                               </div>
@@ -1896,7 +1900,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                                   }
                                   className="h-2"
                                 />
-                                <div className="text-xs text-gray-600 mt-1">
+                                <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                                   {comparisonPlayer.name}
                                 </div>
                               </div>
@@ -1952,17 +1956,17 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                       <div className="grid grid-cols-3 gap-4 mt-6">
                         <div className="text-center p-3 bg-gray-50 rounded">
                           <div className="text-lg font-semibold">324</div>
-                          <div className="text-sm text-gray-600">
+                          <div className="text-sm text-gray-600 dark:text-gray-400">
                             Total Disposals
                           </div>
                         </div>
                         <div className="text-center p-3 bg-gray-50 rounded">
                           <div className="text-lg font-semibold">42</div>
-                          <div className="text-sm text-gray-600">Marks</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">Marks</div>
                         </div>
                         <div className="text-center p-3 bg-gray-50 rounded">
                           <div className="text-lg font-semibold">28</div>
-                          <div className="text-sm text-gray-600">Tackles</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">Tackles</div>
                         </div>
                       </div>
                     </div>
@@ -2037,11 +2041,11 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                               {event.event}
                             </Badge>
                             <span className="font-medium">{event.player}</span>
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-gray-600 dark:text-gray-400">
                               ({event.team})
                             </span>
                           </div>
-                          <p className="text-sm text-gray-600 mt-1">
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                             {event.description}
                           </p>
                         </div>
@@ -2073,7 +2077,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                         <div className="flex justify-between items-center">
                           <span className="font-medium">{zone.zone}</span>
                           <div className="flex items-center gap-2">
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-gray-600 dark:text-gray-400">
                               {zone.current.toLocaleString()} /{" "}
                               {zone.capacity.toLocaleString()}
                             </span>
@@ -2089,7 +2093,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                           </div>
                         </div>
                         <Progress value={zone.density} className="h-3" />
-                        <div className="text-xs text-gray-600 text-right">
+                        <div className="text-xs text-gray-600 dark:text-gray-400 text-right">
                           {zone.density}% capacity
                         </div>
                       </div>
@@ -2168,7 +2172,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                     <div className="text-2xl font-bold text-blue-600">
                       47,326
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
                       Average Attendance
                     </div>
                     <div className="text-xs text-green-600 mt-1">
@@ -2177,7 +2181,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg">
                     <div className="text-2xl font-bold text-green-600">89%</div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
                       Average Capacity
                     </div>
                     <div className="text-xs text-green-600 mt-1">
@@ -2188,8 +2192,8 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                     <div className="text-2xl font-bold text-purple-600">
                       2:45 PM
                     </div>
-                    <div className="text-sm text-gray-600">Peak Entry Time</div>
-                    <div className="text-xs text-gray-600 mt-1">
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Peak Entry Time</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                       15 min before bounce
                     </div>
                   </div>
@@ -2200,11 +2204,11 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Safest Zone</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Safest Zone</p>
                     <p className="text-lg font-bold text-green-600 leading-tight">
                       {safestZone.zone}
                     </p>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
                       {safestZone.density}% full · {safestZone.current.toLocaleString()} people
                     </p>
                   </div>
@@ -2472,7 +2476,7 @@ Export ID: ${Date.now()}-${Math.random().toString(36).substr(2, 9)}
                     >
                       <div className="flex-1">
                         <div className="font-medium">{report.name}</div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           {report.date} • {report.size} • {report.format}
                         </div>
                       </div>
@@ -2533,12 +2537,12 @@ Generated on: ${new Date().toLocaleString()}
                       className="cursor-pointer"
                     >
                       <Video className="w-12 h-12 mx-auto text-gray-400 mb-4" />
-                      <div className="text-lg font-medium text-gray-700">
+                      <div className="text-lg font-medium text-gray-700 dark:text-gray-300">
                         {selectedVideoFile
                           ? selectedVideoFile.name
                           : "Drop video files here"}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
                         or click to browse
                       </div>
                       <div className="text-xs text-gray-400 mt-2">
@@ -2555,7 +2559,7 @@ Generated on: ${new Date().toLocaleString()}
                           {selectedVideoFile.name}
                         </span>
                       </div>
-                      <div className="text-sm text-gray-600 mt-1">
+                      <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                         Size:{" "}
                         {(selectedVideoFile.size / 1024 / 1024).toFixed(1)} MB
                       </div>
@@ -2692,10 +2696,10 @@ Generated on: ${new Date().toLocaleString()}
                   {!videoAnalysisComplete ? (
                     <div className="text-center py-8">
                       <Video className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                      <h3 className="text-lg font-medium text-gray-900 mb-2">
+                      <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
                         No Analysis Results Yet
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 dark:text-gray-400">
                         Upload and analyze a video to see detailed insights here
                       </p>
                     </div>
@@ -2717,7 +2721,7 @@ Generated on: ${new Date().toLocaleString()}
                           </span>
                           <Badge variant="secondary">Complete</Badge>
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           Video: {selectedVideoFile?.name}
                         </div>
                       </div>
@@ -2732,7 +2736,7 @@ Generated on: ${new Date().toLocaleString()}
                               {selectedFocusAreas.length} areas
                             </Badge>
                           </div>
-                          <div className="text-sm text-gray-600">
+                          <div className="text-sm text-gray-600 dark:text-gray-400">
                             {selectedFocusAreas.join(", ")}
                           </div>
                         </div>
@@ -2745,7 +2749,7 @@ Generated on: ${new Date().toLocaleString()}
                           </span>
                           <Badge variant="secondary">Ready</Badge>
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           {selectedAnalysisType === "highlights" &&
                             "Key moments and highlights identified"}
                           {selectedAnalysisType === "player" &&
@@ -2765,7 +2769,7 @@ Generated on: ${new Date().toLocaleString()}
 
                   <div className="space-y-3">
                     <h4 className="font-medium">Export Analysis</h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       Download analysis data from backend in different formats
                     </p>
                     <div className="space-y-2">
@@ -2808,7 +2812,7 @@ Generated on: ${new Date().toLocaleString()}
                           TXT
                         </Button>
                       </div>
-                      <div className="text-xs text-gray-500 mt-2 space-y-1">
+                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-2 space-y-1">
                         <div>
                           <strong>PDF:</strong> Formatted report for
                           printing/sharing
@@ -2851,10 +2855,10 @@ Generated on: ${new Date().toLocaleString()}
                         <div className="flex items-center gap-3">
                           <StatusIcon status={item.status} />
                           <div className="flex-1">
-                            <div className="font-medium text-gray-900">
+                            <div className="font-medium text-gray-900 dark:text-gray-100">
                               {item.name}
                             </div>
-                            <div className="text-sm text-gray-600 flex items-center gap-2">
+                            <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
                               <span>{item.analysisType}</span>
                               <span>•</span>
                               <span>{item.duration}</span>
@@ -2903,7 +2907,7 @@ Generated on: ${new Date().toLocaleString()}
                       {item.progress > 0 && item.progress < 100 && (
                         <div className="space-y-1">
                           <div className="flex justify-between text-sm">
-                            <span className="text-gray-600">
+                            <span className="text-gray-600 dark:text-gray-400">
                               {item.status === "uploading"
                                 ? "Uploading file..."
                                 : item.status === "processing"
@@ -2917,7 +2921,7 @@ Generated on: ${new Date().toLocaleString()}
                             </span>
                           </div>
                           <Progress value={item.progress} className="h-2" />
-                          <div className="text-xs text-gray-500">
+                          <div className="text-xs text-gray-500 dark:text-gray-400">
                             Stage:{" "}
                             {item.processingStage
                               .replace(/_/g, " ")
@@ -2943,7 +2947,7 @@ Generated on: ${new Date().toLocaleString()}
                       )}
 
                       <div className="flex justify-between items-center mt-3">
-                        <div className="flex flex-col text-sm text-gray-500">
+                        <div className="flex flex-col text-sm text-gray-500 dark:text-gray-400">
                           <span>
                             Uploaded: {formatTimeAgo(item.uploadTime)}
                           </span>
@@ -3040,7 +3044,7 @@ Generated on: ${new Date().toLocaleString()}
                               variant="outline"
                               size="sm"
                               onClick={() => removeFromQueue(item.id)}
-                              className="text-gray-600"
+                              className="text-gray-600 dark:text-gray-400"
                             >
                               Cancel
                             </Button>
@@ -3051,7 +3055,7 @@ Generated on: ${new Date().toLocaleString()}
                   ))}
 
                   {processingQueue.length === 0 && (
-                    <div className="text-center py-8 text-gray-500">
+                    <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                       <Clock className="w-12 h-12 mx-auto mb-3 text-gray-300" />
                       <p>No items in processing queue</p>
                       <p className="text-sm">
@@ -3089,19 +3093,19 @@ Generated on: ${new Date().toLocaleString()}
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <div className="text-sm">
-                      <span className="text-gray-600">Duration:</span>{" "}
+                      <span className="text-gray-600 dark:text-gray-400">Duration:</span>{" "}
                       {selectedAnalysisItem.duration}
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-600">File Size:</span>{" "}
+                      <span className="text-gray-600 dark:text-gray-400">File Size:</span>{" "}
                       {selectedAnalysisItem.size}
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-600">Analysis Type:</span>{" "}
+                      <span className="text-gray-600 dark:text-gray-400">Analysis Type:</span>{" "}
                       {selectedAnalysisItem.analysisType}
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-600">Completed:</span>{" "}
+                      <span className="text-gray-600 dark:text-gray-400">Completed:</span>{" "}
                       {selectedAnalysisItem.completedTime
                         ? formatTimeAgo(selectedAnalysisItem.completedTime)
                         : "N/A"}
@@ -3117,7 +3121,7 @@ Generated on: ${new Date().toLocaleString()}
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <div className="text-sm">
-                      <span className="text-gray-600">Priority:</span>
+                      <span className="text-gray-600 dark:text-gray-400">Priority:</span>
                       <Badge
                         variant={
                           selectedAnalysisItem.priority === "high"
@@ -3132,19 +3136,19 @@ Generated on: ${new Date().toLocaleString()}
                       </Badge>
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-600">Status:</span>
+                      <span className="text-gray-600 dark:text-gray-400">Status:</span>
                       <Badge variant="default" className="ml-2 text-xs">
                         {selectedAnalysisItem.status}
                       </Badge>
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-600">Stage:</span>{" "}
+                      <span className="text-gray-600 dark:text-gray-400">Stage:</span>{" "}
                       {selectedAnalysisItem.processingStage
                         .replace(/_/g, " ")
                         .replace(/\b\w/g, (l: string) => l.toUpperCase())}
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-600">Progress:</span>{" "}
+                      <span className="text-gray-600 dark:text-gray-400">Progress:</span>{" "}
                       {selectedAnalysisItem.progress}%
                     </div>
                   </CardContent>
@@ -3184,10 +3188,10 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="font-medium">
                                   Marcus Bontempelli
                                 </div>
-                                <div className="text-sm text-gray-600 mt-1">
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                   Goals: 2 | Tackles: 6 | Efficiency: 85.7%
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Max Speed: 32.4 km/h | Distance: 12.8 km
                                 </div>
                               </div>
@@ -3195,10 +3199,10 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="font-medium">
                                   Patrick Cripps
                                 </div>
-                                <div className="text-sm text-gray-600 mt-1">
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                   Goals: 1 | Tackles: 9 | Efficiency: 88.6%
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Max Speed: 29.8 km/h | Distance: 13.2 km
                                 </div>
                               </div>
@@ -3206,10 +3210,10 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="font-medium">
                                   Clayton Oliver
                                 </div>
-                                <div className="text-sm text-gray-600 mt-1">
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                   Goals: 0 | Tackles: 7 | Efficiency: 82.3%
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Max Speed: 28.1 km/h | Distance: 11.5 km
                                 </div>
                               </div>
@@ -3217,10 +3221,10 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="font-medium">
                                   Christian Petracca
                                 </div>
-                                <div className="text-sm text-gray-600 mt-1">
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                   Goals: 3 | Tackles: 4 | Efficiency: 89.2%
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Max Speed: 31.8 km/h | Distance: 10.9 km
                                 </div>
                               </div>
@@ -3230,10 +3234,10 @@ Generated on: ${new Date().toLocaleString()}
                             <div className="h-64 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
                               <div className="text-center">
                                 <BarChart3 className="w-12 h-12 mx-auto text-gray-400 mb-2" />
-                                <div className="text-lg font-medium text-gray-600">
+                                <div className="text-lg font-medium text-gray-600 dark:text-gray-400">
                                   Performance Charts
                                 </div>
-                                <div className="text-sm text-gray-500">
+                                <div className="text-sm text-gray-500 dark:text-gray-400">
                                   Interactive visualizations will be displayed
                                   here
                                 </div>
@@ -3258,10 +3262,10 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="font-medium">
                                   Northern Stand
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   14,250 / 15,000 (95.0%)
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Noise: 95.2 dB peak
                                 </div>
                               </div>
@@ -3269,19 +3273,19 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="font-medium">
                                   Southern Stand
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   11,680 / 12,000 (97.3%)
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Noise: 92.8 dB peak
                                 </div>
                               </div>
                               <div className="p-3 bg-purple-50 rounded-lg">
                                 <div className="font-medium">Eastern Wing</div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   7,080 / 8,000 (88.5%)
                                 </div>
-                                <div className="text-sm text-gray-600">
+                                <div className="text-sm text-gray-600 dark:text-gray-400">
                                   Noise: 87.4 dB peak
                                 </div>
                               </div>
@@ -3317,7 +3321,7 @@ Generated on: ${new Date().toLocaleString()}
                               <div className="font-medium">
                                 00:03:45 - Opening Goal
                               </div>
-                              <div className="text-sm text-gray-600">
+                              <div className="text-sm text-gray-600 dark:text-gray-400">
                                 Marcus Bontempelli scores with crowd eruption
                                 (94% confidence)
                               </div>
@@ -3326,7 +3330,7 @@ Generated on: ${new Date().toLocaleString()}
                               <div className="font-medium">
                                 00:18:23 - Spectacular Mark
                               </div>
-                              <div className="text-sm text-gray-600">
+                              <div className="text-sm text-gray-600 dark:text-gray-400">
                                 Defensive mark leads to standing ovation (91%
                                 confidence)
                               </div>
@@ -3335,7 +3339,7 @@ Generated on: ${new Date().toLocaleString()}
                               <div className="font-medium">
                                 00:34:56 - Crucial Tackle
                               </div>
-                              <div className="text-sm text-gray-600">
+                              <div className="text-sm text-gray-600 dark:text-gray-400">
                                 Game-changing defensive play (88% confidence)
                               </div>
                             </div>
@@ -3396,10 +3400,10 @@ Generated on: ${new Date().toLocaleString()}
                                 <div className="w-2 h-2 rounded-full bg-white" />
                               </div>
                               <div>
-                                <div className="font-medium text-gray-800">
+                                <div className="font-medium text-gray-800 dark:text-gray-200">
                                   Analysis Quality Score: 9.2/10
                                 </div>
-                                <div className="text-sm text-gray-600 mt-1">
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                                   High-confidence analysis with 94.8% accuracy
                                   across all tracking metrics
                                 </div>
@@ -3415,7 +3419,7 @@ Generated on: ${new Date().toLocaleString()}
 
               {/* Download Options */}
               <div className="flex justify-between items-center pt-4 border-t">
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-600 dark:text-gray-400">
                   Download this analysis in different formats
                 </div>
                 <div className="flex gap-2">

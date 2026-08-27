@@ -214,7 +214,7 @@ export default function CrowdMonitor() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 pb-16 lg:pb-0">
@@ -232,11 +232,11 @@ export default function CrowdMonitor() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Total Attendance</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Total Attendance</p>
                     <p className="text-2xl font-bold">
                       {totalCurrent.toLocaleString()}
                     </p>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
                       of {totalCapacity.toLocaleString()}
                     </p>
                   </div>
@@ -249,9 +249,9 @@ export default function CrowdMonitor() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Average Density</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Average Density</p>
                     <p className="text-2xl font-bold">{averageDensity}%</p>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
                       {getDensityLabel(averageDensity)}
                     </p>
                   </div>
@@ -264,11 +264,11 @@ export default function CrowdMonitor() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Critical Zones</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Critical Zones</p>
                     <p className="text-2xl font-bold text-red-600">
                       {criticalZones.length}
                     </p>
-                    <p className="text-xs text-gray-500">95%+ capacity</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">95%+ capacity</p>
                   </div>
                   <AlertTriangle className="w-8 h-8 text-red-500" />
                 </div>
@@ -279,11 +279,11 @@ export default function CrowdMonitor() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">High Density</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">High Density</p>
                     <p className="text-2xl font-bold text-orange-600">
                       {highDensityZones.length}
                     </p>
-                    <p className="text-xs text-gray-500">85-94% capacity</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">85-94% capacity</p>
                   </div>
                   <BarChart3 className="w-8 h-8 text-orange-500" />
                 </div>
@@ -457,13 +457,13 @@ export default function CrowdMonitor() {
                           <div className="font-medium">
                             {selectedZone.waitTime}min
                           </div>
-                          <div className="text-gray-600">Wait Time</div>
+                          <div className="text-gray-600 dark:text-gray-400">Wait Time</div>
                         </div>
                         <div className="p-2 bg-gray-50 rounded">
                           <div className="font-medium">
                             {selectedZone.flow}/min
                           </div>
-                          <div className="text-gray-600">Flow Rate</div>
+                          <div className="text-gray-600 dark:text-gray-400">Flow Rate</div>
                         </div>
                       </div>
                     </div>
@@ -471,7 +471,7 @@ export default function CrowdMonitor() {
                     <div className="space-y-2">
                       <h5 className="font-medium text-sm">Entry Points</h5>
                       {selectedZone.entryPoints.map((entry, index) => (
-                        <div key={index} className="text-sm text-gray-600">
+                        <div key={index} className="text-sm text-gray-600 dark:text-gray-400">
                           {entry}
                         </div>
                       ))}
@@ -480,7 +480,7 @@ export default function CrowdMonitor() {
                     <div className="space-y-2">
                       <h5 className="font-medium text-sm">Facilities</h5>
                       {selectedZone.facilities.map((facility, index) => (
-                        <div key={index} className="text-sm text-gray-600">
+                        <div key={index} className="text-sm text-gray-600 dark:text-gray-400">
                           {facility}
                         </div>
                       ))}
@@ -504,7 +504,7 @@ export default function CrowdMonitor() {
                       <div className="flex items-center justify-between mb-3">
                         <div>
                           <h4 className="font-medium">{zone.name}</h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-600 dark:text-gray-400">
                             {zone.current.toLocaleString()} /{" "}
                             {zone.capacity.toLocaleString()} people
                           </p>
@@ -544,17 +544,17 @@ export default function CrowdMonitor() {
                       <div className="grid grid-cols-3 gap-2 mt-3 text-sm">
                         <div className="text-center p-2 bg-gray-50 rounded">
                           <div className="font-medium">{zone.waitTime}min</div>
-                          <div className="text-gray-600">Wait</div>
+                          <div className="text-gray-600 dark:text-gray-400">Wait</div>
                         </div>
                         <div className="text-center p-2 bg-gray-50 rounded">
                           <div className="font-medium">{zone.flow}/min</div>
-                          <div className="text-gray-600">Flow</div>
+                          <div className="text-gray-600 dark:text-gray-400">Flow</div>
                         </div>
                         <div className="text-center p-2 bg-gray-50 rounded">
                           <div className="font-medium">
                             {zone.temperature}°C
                           </div>
-                          <div className="text-gray-600">Temp</div>
+                          <div className="text-gray-600 dark:text-gray-400">Temp</div>
                         </div>
                       </div>
 
@@ -645,7 +645,7 @@ export default function CrowdMonitor() {
                           )}{" "}
                           min
                         </div>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           Across all zones
                         </p>
                       </div>
@@ -658,7 +658,7 @@ export default function CrowdMonitor() {
                           {crowdZones.reduce((sum, zone) => sum + zone.flow, 0)}{" "}
                           people/min
                         </div>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           Combined entry/exit rate
                         </p>
                       </div>

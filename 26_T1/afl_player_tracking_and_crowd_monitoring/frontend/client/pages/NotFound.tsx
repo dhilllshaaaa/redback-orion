@@ -22,7 +22,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 flex flex-col">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -57,7 +57,7 @@ export default function NotFound() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400">
                 Don't worry! This happens sometimes. You can go back to the
                 previous page or navigate to one of our main sections below.
               </p>
@@ -108,7 +108,7 @@ export default function NotFound() {
                       <div className="w-8 h-8 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
                         <Icon className="w-4 h-4 text-green-600" />
                       </div>
-                      <span className="font-medium text-gray-700">
+                      <span className="font-medium text-gray-700 dark:text-gray-300">
                         {page.name}
                       </span>
                     </Link>

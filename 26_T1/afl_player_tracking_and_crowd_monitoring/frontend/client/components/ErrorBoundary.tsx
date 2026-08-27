@@ -158,7 +158,7 @@ Component Stack: ${errorInfo?.componentStack || "No component stack"}
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 flex flex-col">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 flex flex-col">
           {/* Header */}
           <header className="border-b bg-white/80 backdrop-blur-sm">
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -239,7 +239,7 @@ Component Stack: ${errorInfo?.componentStack || "No component stack"}
                     {this.state.showDetails && (
                       <div className="mt-4 p-4 bg-gray-50 rounded-lg border text-left">
                         <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-medium text-gray-900">
+                          <h4 className="font-medium text-gray-900 dark:text-gray-100">
                             Error Details
                           </h4>
                           <Button
@@ -251,7 +251,7 @@ Component Stack: ${errorInfo?.componentStack || "No component stack"}
                             Copy
                           </Button>
                         </div>
-                        <pre className="text-xs text-gray-600 whitespace-pre-wrap overflow-auto max-h-60">
+                        <pre className="text-xs text-gray-600 dark:text-gray-400 whitespace-pre-wrap overflow-auto max-h-60">
                           {this.getErrorDetails()}
                         </pre>
                       </div>

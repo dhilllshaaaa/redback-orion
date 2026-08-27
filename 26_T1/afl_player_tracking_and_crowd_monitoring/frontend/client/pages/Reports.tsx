@@ -325,7 +325,7 @@ Thank you for using AFL Analytics Platform.
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 pb-16 lg:pb-0">
@@ -466,27 +466,27 @@ Thank you for using AFL Analytics Platform.
                     <CardContent className="space-y-3">
                       <div className="grid grid-cols-2 gap-2 text-sm">
                         <div>
-                          <span className="text-gray-600">Type:</span>
+                          <span className="text-gray-600 dark:text-gray-400">Type:</span>
                           <div className="font-medium">{report.type}</div>
                         </div>
                         <div>
-                          <span className="text-gray-600">Category:</span>
+                          <span className="text-gray-600 dark:text-gray-400">Category:</span>
                           <div className="font-medium">{report.category}</div>
                         </div>
                         <div>
-                          <span className="text-gray-600">Date:</span>
+                          <span className="text-gray-600 dark:text-gray-400">Date:</span>
                           <div className="font-medium">{report.date}</div>
                         </div>
                         <div>
-                          <span className="text-gray-600">Format:</span>
+                          <span className="text-gray-600 dark:text-gray-400">Format:</span>
                           <div className="font-medium">{report.format}</div>
                         </div>
                         <div>
-                          <span className="text-gray-600">Size:</span>
+                          <span className="text-gray-600 dark:text-gray-400">Size:</span>
                           <div className="font-medium">{report.size}</div>
                         </div>
                         <div>
-                          <span className="text-gray-600">Downloads:</span>
+                          <span className="text-gray-600 dark:text-gray-400">Downloads:</span>
                           <div className="font-medium">{report.downloads}</div>
                         </div>
                       </div>
@@ -536,10 +536,10 @@ Thank you for using AFL Analytics Platform.
                 <Card>
                   <CardContent className="p-8 text-center">
                     <FileText className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-                    <h3 className="text-lg font-medium text-gray-900 mb-2">
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
                       No Reports Found
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 dark:text-gray-400">
                       No reports match your current filter criteria. Try
                       adjusting your filters or generate a new report.
                     </p>
@@ -755,26 +755,26 @@ Thank you for using AFL Analytics Platform.
                 <CardContent className="space-y-3">
                   <div className="grid grid-cols-2 gap-2 text-sm">
                     <div>
-                      <span className="text-gray-600">Type:</span>
+                      <span className="text-gray-600 dark:text-gray-400">Type:</span>
                       <div className="font-medium">{previewReport.type}</div>
                     </div>
                     <div>
-                      <span className="text-gray-600">Category:</span>
+                      <span className="text-gray-600 dark:text-gray-400">Category:</span>
                       <div className="font-medium">{previewReport.category}</div>
                     </div>
                     <div>
-                      <span className="text-gray-600">Created:</span>
+                      <span className="text-gray-600 dark:text-gray-400">Created:</span>
                       <div className="font-medium">
                         {new Date(previewReport.created).toLocaleString()}
                       </div>
                     </div>
                     <div>
-                      <span className="text-gray-600">Downloads:</span>
+                      <span className="text-gray-600 dark:text-gray-400">Downloads:</span>
                       <div className="font-medium">{previewReport.downloads}</div>
                     </div>
                   </div>
                   <Separator />
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
                     Full report preview requires a backend endpoint. Download the{" "}
                     {previewReport.format} file for complete contents.
                   </p>

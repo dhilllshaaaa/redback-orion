@@ -345,7 +345,7 @@ export default function PlayerComparison({
               </div>
               <div>
                 <CardTitle className="text-lg">{player1.name}</CardTitle>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   {player1.team} • {player1.position}
                 </p>
               </div>
@@ -357,19 +357,19 @@ export default function PlayerComparison({
                 <div className="text-lg font-bold text-blue-600">
                   {player1.stats.goals}
                 </div>
-                <div className="text-xs text-gray-600">Goals</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Goals</div>
               </div>
               <div className="bg-green-50 p-2 rounded">
                 <div className="text-lg font-bold text-green-600">
                   {player1.stats.disposals}
                 </div>
-                <div className="text-xs text-gray-600">Disposals</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Disposals</div>
               </div>
               <div className="bg-purple-50 p-2 rounded">
                 <div className="text-lg font-bold text-purple-600">
                   {player1.stats.efficiency}%
                 </div>
-                <div className="text-xs text-gray-600">Efficiency</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Efficiency</div>
               </div>
             </div>
           </CardContent>
@@ -390,7 +390,7 @@ export default function PlayerComparison({
               </div>
               <div>
                 <CardTitle className="text-lg">{player2.name}</CardTitle>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   {player2.team} • {player2.position}
                 </p>
               </div>
@@ -402,19 +402,19 @@ export default function PlayerComparison({
                 <div className="text-lg font-bold text-blue-600">
                   {player2.stats.goals}
                 </div>
-                <div className="text-xs text-gray-600">Goals</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Goals</div>
               </div>
               <div className="bg-green-50 p-2 rounded">
                 <div className="text-lg font-bold text-green-600">
                   {player2.stats.disposals}
                 </div>
-                <div className="text-xs text-gray-600">Disposals</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Disposals</div>
               </div>
               <div className="bg-purple-50 p-2 rounded">
                 <div className="text-lg font-bold text-purple-600">
                   {player2.stats.efficiency}%
                 </div>
-                <div className="text-xs text-gray-600">Efficiency</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">Efficiency</div>
               </div>
             </div>
           </CardContent>

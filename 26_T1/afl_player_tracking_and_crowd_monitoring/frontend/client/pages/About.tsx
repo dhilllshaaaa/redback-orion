@@ -3,7 +3,7 @@ import MobileNavigation from "@/components/MobileNavigation";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 p-6 space-y-6 max-w-5xl">
@@ -15,7 +15,7 @@ export default function About() {
           <CardHeader>
             <CardTitle>Project Overview</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600 leading-relaxed space-y-3">
+          <CardContent className="text-gray-600 dark:text-gray-400 leading-relaxed space-y-3">
             <p>
               Project 4, RedBack Orion is one of our company's initiatives aimed
               at redefining sports engagement.
@@ -37,7 +37,7 @@ export default function About() {
             <CardHeader>
               <CardTitle>Features</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6 text-gray-700">
+            <CardContent className="space-y-6 text-gray-700 dark:text-gray-300">
               
           {/* Player Performance */}
           <Card>
@@ -45,7 +45,7 @@ export default function About() {
               <CardTitle>Player Performance</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                 <li>Live stats: active players, goals, efficiency, disposals</li>
                 <li>Player info: name, age, team, position</li>
                 <li>Detailed stats: kicks, handballs, tackles</li>
@@ -62,7 +62,7 @@ export default function About() {
               <CardTitle>Crowd Monitoring</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                 <li>Total attendance and density tracking</li>
                 <li>Real-time stadium heatmap</li>
                 <li>Zone analytics (capacity, flow)</li>
@@ -78,7 +78,7 @@ export default function About() {
               <CardTitle>Analytics</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                 <li>Upload AFL or crowd footage</li>
                 <li>Automated video analysis</li>
                 <li>Generated reports</li>
@@ -93,7 +93,7 @@ export default function About() {
               <CardTitle>Reports</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+              <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
                 <li>Download reports</li>
                 <li>Quick report generation</li>
                 <li>Custom report builder</li>
@@ -107,7 +107,7 @@ export default function About() {
               <CardTitle>API Diagnostics</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
                 Monitor system performance and debug API interactions in real-time.
               </p>
             </CardContent>

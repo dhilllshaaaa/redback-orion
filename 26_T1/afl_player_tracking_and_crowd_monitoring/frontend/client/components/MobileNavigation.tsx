@@ -73,7 +73,7 @@ export default function MobileNavigation() {
   return (
     <>
       {/* Mobile Header */}
-      <header className="lg:hidden border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+      <header className="lg:hidden border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="flex items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
@@ -117,15 +117,15 @@ export default function MobileNavigation() {
                           }`}
                         >
                           <Icon
-                            className={`w-5 h-5 ${active ? "text-green-600" : "text-gray-500"}`}
+                            className={`w-5 h-5 ${active ? "text-green-600" : "text-gray-500 dark:text-gray-400"}`}
                           />
                           <div className="flex-1">
                             <div
-                              className={`font-medium ${active ? "text-green-700" : "text-gray-700"}`}
+                              className={`font-medium ${active ? "text-green-700" : "text-gray-700 dark:text-gray-300"}`}
                             >
                               {item.name}
                             </div>
-                            <div className="text-xs text-gray-500">
+                            <div className="text-xs text-gray-500 dark:text-gray-400">
                               {item.description}
                             </div>
                           </div>
@@ -144,7 +144,7 @@ export default function MobileNavigation() {
       </header>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:block fixed left-0 top-0 h-full w-64 bg-white border-r z-40">
+      <nav className="hidden lg:block fixed left-0 top-0 h-full w-64 bg-white dark:bg-gray-900 border-r z-40">
         <div className="flex flex-col h-full">
           <div className="flex items-center space-x-2 p-6 border-b">
             <button
@@ -181,15 +181,15 @@ export default function MobileNavigation() {
                     }`}
                   >
                     <Icon
-                      className={`w-5 h-5 ${active ? "text-green-600" : "text-gray-500"}`}
+                      className={`w-5 h-5 ${active ? "text-green-600" : "text-gray-500 dark:text-gray-400"}`}
                     />
                     <div className="flex-1">
                       <div
-                        className={`font-medium ${active ? "text-green-700" : "text-gray-700"}`}
+                        className={`font-medium ${active ? "text-green-700" : "text-gray-700 dark:text-gray-300"}`}
                       >
                         {item.name}
                       </div>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
                         {item.description}
                       </div>
                     </div>
@@ -205,7 +205,7 @@ export default function MobileNavigation() {
       </nav>
 
       {/* Bottom Navigation for Mobile */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t z-40">
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-r z-40">
         <div className="grid grid-cols-7 gap-10 px-3">
           {navigationItems.slice(1, 7).map((item) => {
             const Icon = item.icon;
@@ -218,7 +218,7 @@ export default function MobileNavigation() {
                 className={`flex flex-col items-center py-2 px-1 transition-colors ${
                   active
                     ? "text-green-600"
-                    : "text-gray-500 hover:bg-gray-100 hover:shadow-md hover:scale-[1.02] hover:ring-gray-200"
+                    : "text-gray-500 dark:text-gray-400 hover:bg-gray-100 hover:shadow-md hover:scale-[1.02] hover:ring-gray-200"
                 }`}
               >
                 <Icon className="w-5 h-5 mb-1" />

@@ -282,7 +282,7 @@ export default function ApiDiagnostics() {
       case "error":
         return "text-red-600 bg-red-100";
       default:
-        return "text-gray-600 bg-gray-100";
+        return "text-gray-600 dark:text-gray-400 bg-gray-100";
     }
   };
 
@@ -313,7 +313,7 @@ export default function ApiDiagnostics() {
   const overallHealth = (healthyApis / totalApis) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 pb-16 lg:pb-0">
@@ -333,11 +333,11 @@ export default function ApiDiagnostics() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">API Health</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">API Health</p>
                     <p className="text-2xl font-bold">
                       {healthyApis}/{totalApis}
                     </p>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
                       {overallHealth.toFixed(1)}% healthy
                     </p>
                   </div>
@@ -361,11 +361,11 @@ export default function ApiDiagnostics() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Avg Response</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Avg Response</p>
                     <p className="text-2xl font-bold">
                       {systemMetrics.avgResponseTime.toFixed(0)}ms
                     </p>
-                    <p className="text-xs text-gray-500">Last minute</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Last minute</p>
                   </div>
                   <Zap className="w-6 h-6 text-blue-500" />
                 </div>
@@ -379,11 +379,11 @@ export default function ApiDiagnostics() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Requests/min</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Requests/min</p>
                     <p className="text-2xl font-bold">
                       {systemMetrics.requestsPerMinute}
                     </p>
-                    <p className="text-xs text-gray-500">Current load</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Current load</p>
                   </div>
                   <Activity className="w-6 h-6 text-purple-500" />
                 </div>
@@ -397,11 +397,11 @@ export default function ApiDiagnostics() {
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600">Error Rate</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Error Rate</p>
                     <p className="text-2xl font-bold">
                       {systemMetrics.errorRate.toFixed(1)}%
                     </p>
-                    <p className="text-xs text-gray-500">Last hour</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Last hour</p>
                   </div>
                   <AlertTriangle className="w-6 h-6 text-orange-500" />
                 </div>
@@ -459,20 +459,20 @@ export default function ApiDiagnostics() {
                           </div>
                           <div>
                             <h4 className="font-medium">{api.name}</h4>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
                               {api.endpoint}
                             </p>
                           </div>
                         </div>
                         <div className="text-right">
                           <Badge variant="outline">{api.version}</Badge>
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                             {api.lastCheck}
                           </p>
                         </div>
                       </div>
 
-                      <p className="text-sm text-gray-600 mb-3">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                         {api.description}
                       </p>
 
@@ -481,11 +481,11 @@ export default function ApiDiagnostics() {
                           <div className="font-medium">
                             {api.responseTime}ms
                           </div>
-                          <div className="text-gray-600">Response Time</div>
+                          <div className="text-gray-600 dark:text-gray-400">Response Time</div>
                         </div>
                         <div className="text-center p-2 bg-gray-50 rounded">
                           <div className="font-medium">{api.uptime}%</div>
-                          <div className="text-gray-600">Uptime</div>
+                          <div className="text-gray-600 dark:text-gray-400">Uptime</div>
                         </div>
                         <div className="text-center p-2 bg-gray-50 rounded">
                           <div
@@ -493,7 +493,7 @@ export default function ApiDiagnostics() {
                           >
                             {api.status.toUpperCase()}
                           </div>
-                          <div className="text-gray-600">Status</div>
+                          <div className="text-gray-600 dark:text-gray-400">Status</div>
                         </div>
                       </div>
 
@@ -579,7 +579,7 @@ export default function ApiDiagnostics() {
                         <div className="text-2xl font-bold text-blue-600">
                           {systemMetrics.activeConnections}
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           Active Connections
                         </div>
                       </div>
@@ -587,7 +587,7 @@ export default function ApiDiagnostics() {
                         <div className="text-2xl font-bold text-green-600">
                           {systemMetrics.requestsPerMinute}
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           Requests/min
                         </div>
                       </div>
@@ -595,7 +595,7 @@ export default function ApiDiagnostics() {
                         <div className="text-2xl font-bold text-purple-600">
                           {systemMetrics.avgResponseTime.toFixed(0)}ms
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-sm text-gray-600 dark:text-gray-400">
                           Avg Response
                         </div>
                       </div>
@@ -603,7 +603,7 @@ export default function ApiDiagnostics() {
                         <div className="text-2xl font-bold text-red-600">
                           {systemMetrics.errorRate.toFixed(1)}%
                         </div>
-                        <div className="text-sm text-gray-600">Error Rate</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Error Rate</div>
                       </div>
                     </div>
                   </CardContent>
@@ -623,7 +623,7 @@ export default function ApiDiagnostics() {
                           <CheckCircle className="w-4 h-4 text-green-500" />
                           <span className="font-medium">Primary Database</span>
                         </div>
-                        <div className="space-y-1 text-sm text-gray-600">
+                        <div className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
                           <div>Connection Pool: 45/100</div>
                           <div>Query Time: 23ms</div>
                           <div>Status: Online</div>
@@ -634,7 +634,7 @@ export default function ApiDiagnostics() {
                           <CheckCircle className="w-4 h-4 text-green-500" />
                           <span className="font-medium">Read Replica</span>
                         </div>
-                        <div className="space-y-1 text-sm text-gray-600">
+                        <div className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
                           <div>Connection Pool: 12/50</div>
                           <div>Query Time: 18ms</div>
                           <div>Status: Online</div>
@@ -645,7 +645,7 @@ export default function ApiDiagnostics() {
                           <XCircle className="w-4 h-4 text-red-500" />
                           <span className="font-medium">Cache Redis</span>
                         </div>
-                        <div className="space-y-1 text-sm text-gray-600">
+                        <div className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
                           <div>Memory Usage: 89%</div>
                           <div>Hit Rate: 94.2%</div>
                           <div>Status: Degraded</div>
@@ -689,22 +689,22 @@ export default function ApiDiagnostics() {
                     <table className="w-full">
                       <thead className="bg-gray-50">
                         <tr>
-                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">
+                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600 dark:text-gray-400">
                             Timestamp
                           </th>
-                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">
+                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600 dark:text-gray-400">
                             Method
                           </th>
-                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">
+                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600 dark:text-gray-400">
                             Endpoint
                           </th>
-                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">
+                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600 dark:text-gray-400">
                             Status
                           </th>
-                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">
+                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600 dark:text-gray-400">
                             Response Time
                           </th>
-                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600">
+                          <th className="px-4 py-3 text-left text-sm font-medium text-gray-600 dark:text-gray-400">
                             IP Address
                           </th>
                         </tr>
@@ -712,7 +712,7 @@ export default function ApiDiagnostics() {
                       <tbody className="divide-y divide-gray-200">
                         {apiLogs.map((log) => (
                           <tr key={log.id} className="hover:bg-gray-50">
-                            <td className="px-4 py-3 text-sm text-gray-900">
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">
                               {log.timestamp}
                             </td>
                             <td className="px-4 py-3">
@@ -720,7 +720,7 @@ export default function ApiDiagnostics() {
                                 {log.method}
                               </Badge>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 font-mono">
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-gray-100 font-mono">
                               {log.endpoint}
                             </td>
                             <td className="px-4 py-3">
@@ -730,10 +730,10 @@ export default function ApiDiagnostics() {
                                 {log.status}
                               </span>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900">
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">
                               {log.responseTime}ms
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 font-mono">
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-gray-100 font-mono">
                               {log.ip}
                             </td>
                           </tr>
@@ -859,7 +859,7 @@ export default function ApiDiagnostics() {
                           >
                             {testResult.status}
                           </Badge>
-                          <span className="text-sm text-gray-600">
+                          <span className="text-sm text-gray-600 dark:text-gray-400">
                             {testResult.responseTime.toFixed(0)}ms
                           </span>
                         </div>
@@ -879,7 +879,7 @@ export default function ApiDiagnostics() {
                         </div>
                       </div>
                     ) : (
-                      <div className="text-center py-8 text-gray-500">
+                      <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                         <Terminal className="w-12 h-12 mx-auto mb-3 opacity-50" />
                         <p>No response yet. Send a request to see results.</p>
                       </div>

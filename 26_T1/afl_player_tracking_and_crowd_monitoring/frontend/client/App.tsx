@@ -6,6 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import Login from "./pages/Login";
+import PageSkeleton from "@/components/PageSkeleton";
+import { useTheme } from "@/hooks/use-theme";
 
 const Index = lazy(() => import("./pages/Index"));
 const AFLDashboard = lazy(() => import("./pages/AFLDashboard"));
@@ -18,6 +20,19 @@ const ErrorDemo = lazy(() => import("./pages/ErrorDemo"));
 const About = lazy(() => import("./pages/About"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AddPlayer = lazy(() => import("./pages/AddPlayer"));
+const Settings = lazy(() => import("./pages/Settings"));
+function prefetchRoutes() {
+  import("./pages/PlayerPerformance");
+  import("./pages/CrowdMonitor");
+  import("./pages/Analytics");
+  import("./pages/Reports");
+}
+
+if (typeof window !== "undefined") {
+  const schedule =
+    window.requestIdleCallback || ((cb: () => void) => setTimeout(cb, 2000));
+  schedule(() => prefetchRoutes());
+}
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -62,6 +77,7 @@ const queryClient = new QueryClient({
 });
 
 export default function App() {
+    useTheme();
   return (
     <ErrorBoundary
       onError={(error, errorInfo) => {
@@ -74,13 +90,7 @@ export default function App() {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-                        <Suspense
-              fallback={
-                <div className="flex min-h-screen items-center justify-center">
-                  <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-200 border-t-green-600" />
-                </div>
-              }
-            >
+             <Suspense fallback={<PageSkeleton />}>
               <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/login" element={<Login />} />
@@ -95,6 +105,7 @@ export default function App() {
                 <Route path="/error-demo" element={<ErrorDemo />} />
                 <Route path="/add-player" element={<AddPlayer />} />
                 <Route path="/stitch" element={<Index />} />
+                <Route path="/settings" element={<Settings />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

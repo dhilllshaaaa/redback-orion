@@ -388,15 +388,15 @@ const handleUpload = async () => {
 
   if (!selectedPlayer) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
         <MobileNavigation />
         <div className="lg:ml-64 pb-16 lg:pb-0">
           <div className="p-4 space-y-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                 Player Performance
               </h1>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400">
                 Real-time AFL player analytics and statistics
               </p>
             </div>
@@ -538,7 +538,7 @@ const handleUpload = async () => {
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             {Icon && <Icon className={`w-4 h-4 text-${color}-600`} />}
-            <span className="text-sm font-medium text-gray-600">{title}</span>
+            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{title}</span>
           </div>
           {trend && (
             <div className="flex items-center">
@@ -557,7 +557,7 @@ const handleUpload = async () => {
         <div className={`text-2xl font-bold text-${color}-600 mb-1`}>
           {value}
         </div>
-        {subtitle && <div className="text-xs text-gray-500">{subtitle}</div>}
+        {subtitle && <div className="text-xs text-gray-500 dark:text-gray-400">{subtitle}</div>}
         <div
           className={`absolute bottom-0 right-0 w-16 h-16 bg-${color}-100 rounded-full -mr-8 -mb-8 opacity-50`}
         />
@@ -610,7 +610,7 @@ const handleUpload = async () => {
             />
           ) : (
             <div className="w-12 h-12 rounded-full bg-gray-300 border-2 border-white shadow-lg flex items-center justify-center">
-              <span className="text-sm font-bold text-gray-600">
+              <span className="text-sm font-bold text-gray-600 dark:text-gray-400">
                 {player.name
                   .split(" ")
                   .map((n: string) => n[0])
@@ -621,24 +621,24 @@ const handleUpload = async () => {
 
           <div className="flex-1">
             <h3 className="font-bold text-sm leading-tight">{player.name}</h3>
-            <p className="text-xs text-gray-600">{player.position}</p>
+            <p className="text-xs text-gray-600 dark:text-gray-400">{player.position}</p>
           </div>
         </div>
 
         <div className="grid grid-cols-3 gap-2 text-center text-xs">
           <div className="bg-blue-50 p-2 rounded">
             <div className="font-bold text-blue-600">{player.stats.goals}</div>
-            <div className="text-gray-600">Goals</div>
+            <div className="text-gray-600 dark:text-gray-400">Goals</div>
           </div>
           <div className="bg-green-50 p-2 rounded">
             <div className="font-bold text-green-600">{player.stats.marks}</div>
-            <div className="text-gray-600">Marks</div>
+            <div className="text-gray-600 dark:text-gray-400">Marks</div>
           </div>
           <div className="bg-purple-50 p-2 rounded">
             <div className="font-bold text-purple-600">
               {player.stats.efficiency}%
             </div>
-            <div className="text-gray-600">Eff.</div>
+            <div className="text-gray-600 dark:text-gray-400">Eff.</div>
           </div>
         </div>
       </CardContent>
@@ -646,7 +646,7 @@ const handleUpload = async () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       {/* Main Content */}
@@ -655,10 +655,10 @@ const handleUpload = async () => {
           {/* Header */}
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                 Player Performance
               </h1>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400">
                 Real-time AFL player analytics and statistics
               </p>
             </div>
@@ -850,7 +850,7 @@ const handleUpload = async () => {
                     <Badge variant="outline" className="mb-2">
                       {selectedPlayer.position}
                     </Badge>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       {selectedPlayer.age}y • {selectedPlayer.height} •{" "}
                       {selectedPlayer.weight}
                     </p>
@@ -861,13 +861,13 @@ const handleUpload = async () => {
                       <div className="text-2xl font-bold text-blue-600">
                         {selectedPlayer.stats.goals}
                       </div>
-                      <div className="text-xs text-gray-600">GOALS</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">GOALS</div>
                     </div>
                     <div className="bg-green-50 p-3 rounded-lg">
                       <div className="text-2xl font-bold text-green-600">
                         {selectedPlayer.stats.disposals}
                       </div>
-                      <div className="text-xs text-gray-600">DISPOSALS</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">DISPOSALS</div>
                     </div>
                   </div>
 
@@ -1072,7 +1072,7 @@ const handleUpload = async () => {
                         >
                           {score}
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">
+                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                           R{10 - index}
                         </div>
                       </div>
@@ -1121,7 +1121,7 @@ const handleUpload = async () => {
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <div className="text-xs text-gray-500 mb-1">
+                            <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
                               Touches
                             </div>
                             <Progress
@@ -1130,7 +1130,7 @@ const handleUpload = async () => {
                             />
                           </div>
                           <div>
-                            <div className="text-xs text-gray-500 mb-1">
+                            <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
                               Effectiveness
                             </div>
                             <Progress

@@ -68,7 +68,7 @@ export default function LoadingState({
         <div className="flex items-center justify-center py-8">
           <div className="flex items-center space-x-2">
             <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-            <span className="text-sm text-gray-600">{loadingText}</span>
+            <span className="text-sm text-gray-600 dark:text-gray-400">{loadingText}</span>
           </div>
         </div>
       );
@@ -79,7 +79,7 @@ export default function LoadingState({
         <Card>
           <CardContent className="p-8 text-center">
             <Loader2 className="w-8 h-8 animate-spin text-blue-600 mx-auto mb-4" />
-            <p className="text-gray-600">{loadingText}</p>
+            <p className="text-gray-600 dark:text-gray-400">{loadingText}</p>
           </CardContent>
         </Card>
       );
@@ -89,7 +89,7 @@ export default function LoadingState({
     return (
       <div className="flex flex-col items-center justify-center py-12">
         <Loader2 className="w-12 h-12 animate-spin text-blue-600 mb-4" />
-        <p className="text-lg text-gray-600">{loadingText}</p>
+        <p className="text-lg text-gray-600 dark:text-gray-400">{loadingText}</p>
       </div>
     );
   }
@@ -142,14 +142,14 @@ export default function LoadingState({
         <Card>
           <CardContent className="p-8 text-center">
             <ErrorIcon className={`w-12 h-12 mx-auto mb-4 ${errorColor}`} />
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
               {isNetworkError
                 ? "Connection Error"
                 : isServerError
                   ? "Server Error"
                   : "Error"}
             </h3>
-            <p className="text-gray-600 mb-4">{errorMessage}</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">{errorMessage}</p>
             {showRetry && onRetry && (
               <Button onClick={onRetry}>
                 <RefreshCw className="w-4 h-4 mr-2" />
@@ -167,14 +167,14 @@ export default function LoadingState({
         <div className="flex items-start space-x-3">
           <ErrorIcon className={`w-6 h-6 ${errorColor} mt-1 flex-shrink-0`} />
           <div className="flex-1">
-            <h3 className="font-medium text-gray-900 mb-1">
+            <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-1">
               {isNetworkError
                 ? "Connection Problem"
                 : isServerError
                   ? "Server Error"
                   : "Something went wrong"}
             </h3>
-            <p className="text-gray-600 mb-3">{errorMessage}</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-3">{errorMessage}</p>
             {showRetry && onRetry && (
               <Button size="sm" variant="outline" onClick={onRetry}>
                 <RefreshCw className="w-4 h-4 mr-2" />
@@ -192,7 +192,7 @@ export default function LoadingState({
     if (variant === "inline") {
       return (
         <div className="text-center py-6">
-          <p className="text-gray-500">{emptyText}</p>
+          <p className="text-gray-500 dark:text-gray-400">{emptyText}</p>
         </div>
       );
     }
@@ -204,10 +204,10 @@ export default function LoadingState({
             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Clock className="w-8 h-8 text-gray-400" />
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
               {emptyText}
             </h3>
-            <p className="text-gray-600">{emptyDescription}</p>
+            <p className="text-gray-600 dark:text-gray-400">{emptyDescription}</p>
           </CardContent>
         </Card>
       );
@@ -219,8 +219,8 @@ export default function LoadingState({
         <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <Clock className="w-8 h-8 text-gray-400" />
         </div>
-        <h3 className="text-lg font-medium text-gray-900 mb-2">{emptyText}</h3>
-        <p className="text-gray-600">{emptyDescription}</p>
+        <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">{emptyText}</h3>
+        <p className="text-gray-600 dark:text-gray-400">{emptyDescription}</p>
       </div>
     );
   }
@@ -290,8 +290,8 @@ export const SuccessState = ({
     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
       <CheckCircle className="w-8 h-8 text-green-600" />
     </div>
-    <h3 className="text-lg font-medium text-gray-900 mb-2">{message}</h3>
-    {description && <p className="text-gray-600 mb-4">{description}</p>}
+    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">{message}</h3>
+    {description && <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>}
     {action}
   </div>
 );

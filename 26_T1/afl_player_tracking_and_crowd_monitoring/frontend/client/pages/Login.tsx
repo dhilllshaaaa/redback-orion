@@ -364,7 +364,7 @@ export default function Login() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
@@ -377,7 +377,7 @@ export default function Login() {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                   AFL Analytics
                 </h1>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   Professional Sports Analytics Platform
                 </p>
               </div>
@@ -406,13 +406,13 @@ export default function Login() {
                   <Shield className="w-3 h-3 mr-1" />
                   Trusted by AFL Teams
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
                   Professional AFL
                   <span className="block bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                     Analytics Platform
                   </span>
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-600 dark:text-gray-400">
                   Comprehensive player performance tracking, crowd monitoring,
                   and match analytics designed specifically for Australian
                   Football League professionals.
@@ -432,10 +432,10 @@ export default function Login() {
                           <Icon className="w-4 h-4 text-green-600" />
                         </div>
                         <div>
-                          <h4 className="font-medium text-gray-900">
+                          <h4 className="font-medium text-gray-900 dark:text-gray-100">
                             {feature.title}
                           </h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-600 dark:text-gray-400">
                             {feature.description}
                           </p>
                         </div>
@@ -587,7 +587,7 @@ export default function Login() {
                             <button
                               type="button"
                               onClick={() => setShowPassword(!showPassword)}
-                              className="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
+                              className="absolute right-3 top-3 text-gray-400 hover:text-gray-600 dark:text-gray-400"
                             >
                               {showPassword ? (
                                 <EyeOff className="h-4 w-4" />
@@ -968,7 +968,7 @@ export default function Login() {
                     maxLength={6}
                     required
                   />
-                  <p className="text-xs text-gray-600">
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
                     For demo purposes, use code: <strong>123456</strong>
                   </p>
                 </div>

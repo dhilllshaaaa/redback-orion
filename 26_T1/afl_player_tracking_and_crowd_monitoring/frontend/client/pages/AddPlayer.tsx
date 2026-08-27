@@ -148,17 +148,17 @@ export default function AddPlayer() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <MobileNavigation />
 
       <div className="lg:ml-64 min-h-screen flex flex-col">
         <div className="flex-1 px-4 md:px-6 py-6 flex flex-col gap-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                 Add New Player
               </h1>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400">
                 Add a new player into the AFL analytics system
               </p>
             </div>
@@ -191,7 +191,7 @@ export default function AddPlayer() {
               )}
 
               <div className="space-y-4">
-                <h2 className="text-lg font-semibold text-gray-900">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   Basic Information
                 </h2>
 
@@ -333,7 +333,7 @@ export default function AddPlayer() {
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-lg font-semibold text-gray-900">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   Performance Stats
                 </h2>
 
@@ -421,7 +421,7 @@ export default function AddPlayer() {
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-lg font-semibold text-gray-900">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   Extra Details
                 </h2>
 

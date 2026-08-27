@@ -117,7 +117,7 @@ export default function LiveClock({
       {/* Time Display */}
       <div className="flex items-center gap-4 text-sm">
         <div className="flex items-center gap-1">
-          <Clock className="w-4 h-4 text-gray-500" />
+          <Clock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
           <span className="font-mono">{formatTime(currentTime)}</span>
         </div>
 
@@ -125,7 +125,7 @@ export default function LiveClock({
           <>
             <div className="h-4 w-px bg-gray-300" />
             <div className="flex items-center gap-2">
-              <span className="text-gray-600">Q{gameTime.quarter}</span>
+              <span className="text-gray-600 dark:text-gray-400">Q{gameTime.quarter}</span>
               <span className="font-mono font-medium">{formatGameTime()}</span>
             </div>
           </>

@@ -94,7 +94,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -109,25 +109,25 @@ export default function Index() {
           <nav className="hidden md:flex items-center space-x-6">
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-100 transition-colors"
             >
               Features
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-100 transition-colors"
             >
               Examples
             </a>
             <a
               href="/afl-dashboard"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-100 transition-colors"
             >
               AFL Dashboard
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:text-gray-100 transition-colors"
             >
               Docs
             </a>
@@ -153,14 +153,14 @@ export default function Index() {
           <Sparkles className="w-3 h-3 mr-1" />
           AI-Powered UI Design
         </Badge>
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6 leading-tight">
           Design UIs with
           <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {" "}
             Natural Language
           </span>
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
           Transform your ideas into beautiful, functional user interfaces
           instantly. Just describe what you want, and our AI will create
           pixel-perfect designs with production-ready code.
@@ -177,7 +177,7 @@ export default function Index() {
                 className="min-h-[120px] text-lg border-0 focus-visible:ring-0 resize-none"
               />
               <div className="flex items-center justify-between mt-4">
-                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
                   <span>Try:</span>
                   <button
                     className="text-blue-600 hover:underline"
@@ -244,10 +244,10 @@ export default function Index() {
       {/* Features Grid */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Everything you need to design faster
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             From concept to code in minutes. Our AI understands design patterns,
             accessibility, and modern web standards.
           </p>
@@ -266,7 +266,7 @@ export default function Index() {
                     <Icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-gray-600">
+                  <CardDescription className="text-gray-600 dark:text-gray-400">
                     {feature.description}
                   </CardDescription>
                 </CardHeader>
@@ -279,10 +279,10 @@ export default function Index() {
       {/* Examples Section */}
       <section className="container mx-auto px-4 py-16 bg-gray-50 rounded-3xl mx-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Inspiration from the community
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 dark:text-gray-400">
             See what others are building with Stitch
           </p>
         </div>
@@ -320,10 +320,10 @@ export default function Index() {
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Ready to revolutionize your design workflow?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
             Join thousands of designers and developers who are building faster
             with AI
           </p>
@@ -349,16 +349,16 @@ export default function Index() {
               <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-md flex items-center justify-center">
                 <Wand2 className="w-4 h-4 text-white" />
               </div>
-              <span className="font-semibold text-gray-900">Stitch</span>
+              <span className="font-semibold text-gray-900 dark:text-gray-100">Stitch</span>
             </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-600">
-              <a href="#" className="hover:text-gray-900 transition-colors">
+            <div className="flex items-center space-x-6 text-sm text-gray-600 dark:text-gray-400">
+              <a href="#" className="hover:text-gray-900 dark:text-gray-100 transition-colors">
                 Privacy
               </a>
-              <a href="#" className="hover:text-gray-900 transition-colors">
+              <a href="#" className="hover:text-gray-900 dark:text-gray-100 transition-colors">
                 Terms
               </a>
-              <a href="#" className="hover:text-gray-900 transition-colors">
+              <a href="#" className="hover:text-gray-900 dark:text-gray-100 transition-colors">
                 Support
               </a>
               <Separator orientation="vertical" className="h-4" />
